@@ -1,0 +1,166 @@
+id,nama_makanan,deskripsi,kategori,kalori,status_kesehatan,jenis,keterangan_kalori
+2,Gado-Gado,"Sayuran rebus disiram saus kacang, kadang ditambah lontong.",makanan,250,sehat,makanan berat,Sedang
+6,Soto Ayam,"Sup ayam berkuah kuning dengan bihun, telur, dan emping.",makanan,300,sehat,makanan berat,Sedang
+11,Tahu Gejrot,"Tahu goreng kecil dengan bumbu kuah manis pedas.",makanan,180,sehat,makanan ringan,Rendah
+17,Getuk,"Olahan singkong manis warna-warni.",makanan,190,sehat,cemilan,Rendah
+23,Asinan Betawi,"Sayuran segar dalam kuah cuka manis asam.",makanan,200,sehat,makanan ringan,Rendah
+30,Sayur Asem,"Sup asam segar dengan kacang panjang, jagung, melinjo.",makanan,150,sehat,makanan berat,Rendah
+31,Rujak Buah,"Buah segar disajikan dengan bumbu kacang pedas.",makanan,180,sehat,cemilan,Rendah
+33,Tempe Goreng,"Tempe kedelai yang digoreng renyah.",makanan,250,sehat,makanan ringan,Sedang
+43,Lemper,"Olahan ketan isi ayam suwir atau abon.",makanan,220,sehat,cemilan,Rendah
+50,Nasi Pecel,"Nasi dengan sayuran rebus dan sambal kacang.",makanan,340,sehat,makanan berat,Sedang
+54,Lontong Balap,"Lontong dengan tauge, lentho, dan sambal petis.",makanan,250,sehat,makanan berat,Sedang
+55,Sate Lilit,"Sate khas Bali dari ikan cincang berbumbu, dililitkan ke serai.",makanan,220,sehat,makanan berat,Rendah
+57,Karedok,"Sayuran mentah disiram saus kacang khas Sunda.",makanan,180,sehat,makanan ringan,Rendah
+62,Sayur Bayam,"Bayam kuah bening dengan jagung dan wortel.",makanan,150,sehat,makanan ringan,Rendah
+65,Wedang Jahe,"Minuman jahe hangat tradisional Jawa.",minuman,100,sehat,minuman,Rendah
+71,Bubur Ayam,"Bubur nasi dengan suwiran ayam, cakwe, dan kerupuk.",makanan,290,sehat,makanan berat,Sedang
+73,Nasi Lengko,"Nasi dengan tahu, tempe, dan tauge khas Cirebon.",makanan,300,sehat,makanan berat,Sedang
+75,Puding Santan,"Puding lembut dari santan dan gula aren.",makanan,200,sehat,cemilan,Rendah
+80,Sambal Ijo,"Sambal dari cabai hijau, tomat, dan bawang.",makanan,120,sehat,makanan ringan,Rendah
+83,Lupis,"Ketan berbalut kelapa dan gula merah cair.",makanan,240,sehat,cemilan,Rendah
+84,Kacang Rebus,"Kacang tanah direbus dengan kulitnya.",makanan,180,sehat,cemilan,Rendah
+86,Bakpia,"Kue isi kacang hijau khas Yogyakarta.",makanan,220,sehat,cemilan,Rendah
+87,Nasi Jagung,"Nasi campur jagung dengan lauk tradisional.",makanan,300,sehat,makanan berat,Sedang
+91,Sambal Matah,"Sambal mentah khas Bali dengan serai dan bawang.",makanan,100,sehat,makanan ringan,Rendah
+93,Lempeng Pisang,"Kue tradisional dari pisang dan tepung.",makanan,230,sehat,cemilan,Rendah
+94,Binte Biluhuta,"Sup jagung khas Gorontalo dengan ikan dan kemangi.",makanan,250,sehat,makanan berat,Sedang
+101,Pepes Ikan,"Ikan dibungkus daun pisang dengan bumbu rempah, dikukus.",makanan,220,sehat,makanan berat,Rendah
+102,Urap-Urap,"Sayuran segar dengan kelapa parut dan bumbu.",makanan,180,sehat,makanan ringan,Rendah
+103,Sup Ikan,"Sup bening dengan ikan segar dan sayuran.",makanan,200,sehat,makanan berat,Rendah
+104,Pepes Tahu,"Tahu dibungkus daun pisang dengan bumbu, dikukus.",makanan,190,sehat,makanan ringan,Rendah
+105,Tumis Kangkung,"Kangkung ditumis dengan bawang dan cabai.",makanan,150,sehat,makanan ringan,Rendah
+106,Oseng-Oseng Tempe,"Tempe ditumis dengan bumbu sederhana.",makanan,210,sehat,makanan ringan,Sedang
+107,Buntil,"Daun pepaya muda berisi parutan kelapa.",makanan,170,sehat,makanan ringan,Rendah
+108,Sup Jagung,"Sup jagung manis dengan ayam atau seafood.",makanan,230,sehat,makanan berat,Rendah
+109,Ikan Bakar,"Ikan segar dibakar dengan bumbu sederhana.",makanan,250,sehat,makanan berat,Sedang
+110,Capcay Kuah,"Sayuran tumis dengan kuah bening.",makanan,190,sehat,makanan ringan,Rendah
+111,Nagasari,"Kue dari tepung beras dengan pisang dibungkus daun pisang.",makanan,180,sehat,cemilan,Rendah
+112,Kue Putu,"Kue tepung berisi gula merah, dikukus dalam tabung bambu.",makanan,160,sehat,cemilan,Rendah
+113,Ongol-Ongol,"Kue dari tepung sagu dengan gula merah.",makanan,170,sehat,cemilan,Rendah
+115,Lemper Ayam,"Ketan dibungkus daun pisang berisi ayam.",makanan,230,sehat,cemilan,Rendah
+117,Kue Ape,"Kue panggang berbentuk setengah lingkaran.",makanan,180,sehat,cemilan,Rendah
+120,Kue Putu Ayu,"Kue hijau dari pandan dengan kelapa parut.",makanan,190,sehat,cemilan,Rendah
+121,Acar Kuning,"Sayuran acar dengan kunyit.",makanan,120,sehat,makanan ringan,Rendah
+122,Pecel,"Sayuran dengan sambal kacang tanpa santan.",makanan,170,sehat,makanan ringan,Rendah
+124,Sop Oyong,"Sup oyong (gambas) dengan wortel.",makanan,140,sehat,makanan ringan,Rendah
+125,Tumis Buncis,"Buncis ditumis dengan bawang putih.",makanan,130,sehat,makanan ringan,Rendah
+126,Sop Tahu,"Sup tahu dengan jamur dan sayuran.",makanan,160,sehat,makanan ringan,Rendah
+127,Oseng Kacang Panjang,"Kacang panjang ditumis dengan tempe.",makanan,180,sehat,makanan ringan,Rendah
+128,Tumis Jamur,"Jamur tiram ditumis dengan bawang.",makanan,150,sehat,makanan ringan,Rendah
+129,Sop Kimlo,"Sup bening dengan jamur dan sayuran.",makanan,190,sehat,makanan ringan,Rendah
+130,Tahu Sutra,"Tahu lembut dengan kuah bening.",makanan,160,sehat,makanan ringan,Rendah
+132,Bubur Manado,"Bubur dengan berbagai sayuran khas Manado.",makanan,230,sehat,makanan berat,Rendah
+133,Soto Banjar,"Sop ayam dengan aroma kayu manis khas Banjar.",makanan,290,sehat,makanan berat,Sedang
+134,Pallu Mara,"Sup ikan asam pedas khas Sulawesi.",makanan,250,sehat,makanan berat,Sedang
+136,Lapa-Lapa,"Nasi ketan dibungkus daun kelapa khas Buton.",makanan,260,sehat,makanan berat,Sedang
+140,Lemang,"Nasi ketan dimasak dalam bambu.",makanan,280,sehat,makanan berat,Sedang
+142,Bandrek,"Minuman jahe dengan gula aren dan rempah.",minuman,120,sehat,minuman,Rendah
+148,Teh Poci,"Teh tradisional disajikan dalam teko tanah liat.",minuman,80,sehat,minuman,Rendah
+149,Kopi Tubruk,"Kopi tradisional Indonesia.",minuman,90,sehat,minuman,Rendah
+151,Pepes Jamur,"Jamur dibungkus daun pisang dengan bumbu rempah, dikukus.",makanan,120,sehat,makanan ringan,Rendah
+153,Tumis Pakis,"Sayuran pakis ditumis dengan bawang putih.",makanan,130,sehat,makanan ringan,Rendah
+154,Ubi Rebus,"Ubi jalar atau ungu rebus alami.",makanan,100,sehat,cemilan,Rendah
+155,Kacang Panjang Rebus,"Kacang panjang sederhana rebus dengan sedikit garam.",makanan,70,sehat,makanan ringan,Rendah
+156,Es Kelapa Muda,"Air kelapa muda asli dengan es.",minuman,70,sehat,minuman,Rendah
+161,Es Teh Lemon,"Teh dingin dengan perasan lemon.",minuman,80,sehat,minuman,Rendah
+163,Telur Pindang,"Telur rebus dengan bumbu rempah khas Jawa.",makanan,160,sehat,makanan ringan,Rendah
+164,Keripik Bayam,"Bayam goreng renyah dengan tepung tipis.",makanan,130,sehat,cemilan,Rendah
+1,Nasi Goreng,"Nasi goreng dengan bumbu bawang putih, kecap manis, telur, dan ayam.",makanan,350,tidak sehat,makanan berat,Sedang
+3,Martabak Manis,"Adonan tepung panggang diisi cokelat, keju, kacang, dan susu.",makanan,450,tidak sehat,cemilan,Tinggi
+4,Bakso,"Bola daging sapi kuah dengan mie dan sayur.",makanan,380,tidak sehat,makanan berat,Sedang
+7,Rawon,"Sup daging sapi hitam khas Jawa Timur dengan kluwek.",makanan,420,tidak sehat,makanan berat,Tinggi
+8,Rendang,"Daging sapi dimasak dalam santan dan rempah-rempah.",makanan,400,tidak sehat,makanan berat,Sedang
+9,Pecel Lele,"Ikan lele goreng dengan sambal dan lalapan.",makanan,450,tidak sehat,makanan berat,Tinggi
+12,Kerak Telor,"Telur bebek dan ketan dengan serundeng bakar khas Betawi.",makanan,400,tidak sehat,makanan berat,Sedang
+13,Sop Buntut,"Sup buntut sapi dengan sayur wortel dan kentang.",makanan,420,tidak sehat,makanan berat,Tinggi
+14,Ayam Penyet,"Ayam goreng penyet dengan sambal terasi.",makanan,430,tidak sehat,makanan berat,Tinggi
+18,Bika Ambon,"Kue tradisional dari Medan bertekstur bersarang.",makanan,320,tidak sehat,cemilan,Sedang
+19,Lapis Legit,"Kue lapis berlapis-lapis rasa rempah.",makanan,450,tidak sehat,cemilan,Tinggi
+20,Pempek,"Olahan ikan dan sagu khas Palembang.",makanan,350,tidak sehat,makanan berat,Sedang
+21,Serabi,"Pancake tradisional Indonesia dari tepung beras.",makanan,280,tidak sehat,cemilan,Sedang
+22,Sambal Goreng Ati,"Hati ayam dengan sambal goreng kentang.",makanan,390,tidak sehat,makanan berat,Sedang
+24,Tumpeng,"Nasi kuning berbentuk kerucut dengan lauk pauk.",makanan,600,tidak sehat,makanan berat,Tinggi
+25,Opor Ayam,"Ayam dimasak dengan santan dan bumbu rempah.",makanan,380,tidak sehat,makanan berat,Sedang
+26,Gudeg,"Nangka muda manis dimasak santan khas Yogyakarta.",makanan,450,tidak sehat,makanan berat,Tinggi
+27,Nasi Kuning,"Nasi berbumbu kunyit dan santan, biasa untuk syukuran.",makanan,370,tidak sehat,makanan berat,Sedang
+28,Sate Padang,"Sate daging dengan kuah kental bumbu kuning.",makanan,400,tidak sehat,makanan berat,Sedang
+29,Ayam Betutu,"Ayam utuh dibumbui rempah khas Bali lalu dipanggang.",makanan,390,tidak sehat,makanan berat,Sedang
+34,Telur Balado,"Telur rebus digoreng lalu dimasak sambal pedas.",makanan,320,tidak sehat,makanan berat,Sedang
+35,Nasi Uduk,"Nasi gurih santan disajikan dengan lauk pauk.",makanan,400,tidak sehat,makanan berat,Sedang
+36,Nasi Liwet,"Nasi gurih dengan santan, lauk ayam, telur, dan sayur.",makanan,420,tidak sehat,makanan berat,Tinggi
+38,Ayam Goreng Lengkuas,"Ayam goreng dengan bumbu lengkuas parut.",makanan,410,tidak sehat,makanan berat,Tinggi
+39,Empal Gepuk,"Daging sapi manis gurih digoreng khas Sunda.",makanan,430,tidak sehat,makanan berat,Tinggi
+46,Batagor,"Bakso tahu goreng disajikan dengan bumbu kacang.",makanan,400,tidak sehat,makanan berat,Sedang
+49,Semur Jengkol,"Jengkol dimasak dengan bumbu semur manis.",makanan,380,tidak sehat,makanan berat,Sedang
+51,Nasi Campur,"Nasi dengan aneka lauk seperti telur, ayam, dan sambal.",makanan,400,tidak sehat,makanan berat,Sedang
+52,Sate Kambing,"Tusukan daging kambing bakar dengan kecap dan bawang.",makanan,450,tidak sehat,makanan berat,Tinggi
+56,Gulai Kambing,"Masakan kambing dengan kuah santan rempah.",makanan,470,tidak sehat,makanan berat,Tinggi
+59,Es Cendol,"Minuman manis dengan santan, gula merah, dan tepung beras.",makanan,250,tidak sehat,cemilan,Sedang
+63,Nasi Kebuli,"Nasi berbumbu khas Timur Tengah dengan daging kambing.",makanan,520,tidak sehat,makanan berat,Tinggi
+66,Es Teler,"Minuman es dengan buah, susu, dan sirup.",minuman,350,tidak sehat,minuman,Sedang
+70,Kue Cubit,"Kue kecil manis sering dijajakan di sekolah.",makanan,210,tidak sehat,cemilan,Rendah
+76,Es Doger,"Es kelapa muda, tape, ketan hitam dan sirup.",minuman,340,tidak sehat,minuman,Sedang
+77,Roti Bakar,"Roti isi cokelat atau keju dipanggang.",makanan,350,tidak sehat,cemilan,Sedang
+81,Telur Dadar Padang,"Telur dadar tebal khas rumah makan Padang.",makanan,400,tidak sehat,makanan berat,Sedang
+88,Oseng Mercon,"Tumis daging pedas khas Yogyakarta.",makanan,450,tidak sehat,makanan berat,Tinggi
+89,Nasi Krawu,"Nasi dengan suwiran daging dan serundeng khas Gresik.",makanan,420,tidak sehat,makanan berat,Tinggi
+90,Es Campur,"Es serut dengan sirup, buah, dan jeli.",minuman,350,tidak sehat,minuman,Sedang
+92,Ayam Kalasan,"Ayam goreng dengan bumbu manis khas Yogyakarta.",makanan,400,tidak sehat,makanan berat,Sedang
+95,Tinoransak,"Daging dimasak pedas khas Manado.",makanan,420,tidak sehat,makanan berat,Tinggi
+96,Ayam Taliwang,"Ayam bakar pedas khas Lombok.",makanan,410,tidak sehat,makanan berat,Tinggi
+97,Nasi Becek,"Nasi dengan kuah daging seperti gulai.",makanan,430,tidak sehat,makanan berat,Tinggi
+98,Es Pisang Ijo,"Pisang dibungkus adonan hijau disajikan dengan es dan sirup.",makanan,360,tidak sehat,cemilan,Sedang
+5,Sate Ayam,"Tusukan daging ayam bakar dengan bumbu kacang.",makanan,350,sedang,makanan berat,Sedang
+10,Lontong Sayur,"Lontong dengan kuah santan dan sayuran.",makanan,330,sedang,makanan berat,Sedang
+15,Klepon,"Bola ketan isi gula merah, ditaburi kelapa parut.",makanan,200,sedang,cemilan,Rendah
+16,Dadar Gulung,"Kue dadar isi kelapa dan gula merah.",makanan,210,sedang,cemilan,Rendah
+32,Perkedel Kentang,"Olahan kentang tumbuk goreng berbentuk bulat.",makanan,210,sedang,makanan ringan,Rendah
+37,Sambal Terasi,"Sambal berbahan terasi, cabai, dan tomat.",makanan,120,sedang,makanan ringan,Rendah
+40,Pastel,"Gorengan berisi sayur dan bihun.",makanan,280,sedang,cemilan,Sedang
+41,Risoles,"Lumpia goreng berisi ragout ayam atau sayur.",makanan,300,sedang,cemilan,Sedang
+42,Perkedel Jagung,"Bakwan jagung goreng kriuk.",makanan,290,sedang,makanan ringan,Sedang
+44,Arem-Arem,"Nasi berisi lauk dibungkus daun pisang.",makanan,260,sedang,makanan ringan,Sedang
+45,Combro,"Olahan singkong goreng isi oncom.",makanan,250,sedang,cemilan,Sedang
+47,Siomay Bandung,"Siomay kukus berisi ikan tenggiri dengan sayuran.",makanan,350,sedang,makanan berat,Sedang
+48,Gehu Pedas,"Tahu isi sayuran pedas goreng.",makanan,270,sedang,makanan ringan,Sedang
+53,Sayur Lodeh,"Sayur berkuah santan dengan labu, kacang panjang, dan tempe.",makanan,280,sedang,makanan berat,Sedang
+58,Nasi Bakar,"Nasi berbumbu dibungkus daun pisang dengan ayam atau teri.",makanan,330,sedang,makanan berat,Sedang
+60,Cilok,"Aci bulat dengan bumbu kacang atau saus.",makanan,200,sedang,cemilan,Rendah
+61,Bakwan Sayur,"Gorengan tepung berisi sayur kol dan wortel.",makanan,280,sedang,makanan ringan,Sedang
+64,Kolak Pisang,"Pisang rebus dengan kuah santan dan gula merah.",makanan,310,sedang,cemilan,Sedang
+67,Lodeh Terong,"Terong dalam kuah santan gurih.",makanan,230,sedang,makanan ringan,Rendah
+68,Timlo Solo,"Sup Solo dengan telur, sosis solo, dan sayuran.",makanan,320,sedang,makanan berat,Sedang
+69,Sate Kerang,"Kerang rebus dibakar dan dibumbui pedas manis.",makanan,220,sedang,makanan ringan,Rendah
+72,Bubur Ketan Hitam,"Bubur manis dari ketan hitam dan santan.",makanan,280,sedang,cemilan,Sedang
+74,Pisang Goreng,"Pisang digoreng tepung, disajikan hangat.",makanan,270,sedang,cemilan,Sedang
+78,Tahu Isi,"Tahu digoreng berisi sayuran atau bihun.",makanan,250,sedang,makanan ringan,Sedang
+79,Nasi Serundeng,"Nasi dengan kelapa parut goreng dan lauk.",makanan,370,sedang,makanan berat,Sedang
+82,Gorengan Tempe Mendoan,"Tempe tipis dibalur tepung lalu digoreng setengah matang.",makanan,230,sedang,makanan ringan,Sedang
+85,Bolu Kukus,"Kue bolu lembut dikukus, warna-warni.",makanan,260,sedang,cemilan,Sedang
+99,Kerupuk Jengkol,"Kerupuk dari olahan jengkol khas Betawi.",makanan,200,sedang,cemilan,Rendah
+100,Cendol Dawet,"Minuman tradisional dengan cendol dan gula aren.",minuman,280,sedang,minuman,Sedang
+114,Kue Lumpur,"Kue panggang berbahan santan dan kentang.",makanan,210,sedang,cemilan,Sedang
+116,Kue Cucur,"Kue goreng dari tepung beras dan gula merah.",makanan,240,sedang,cemilan,Sedang
+118,Kue Pancong,"Kue dari tepung beras dan santan berbentuk setengah lingkaran.",makanan,220,sedang,cemilan,Sedang
+119,Kue Mangkok,"Kue kukus berbentuk mangkok.",makanan,200,sedang,cemilan,Rendah
+123,Tahu Telur,"Tahu dan telur dengan saus kacang.",makanan,230,sedang,makanan ringan,Sedang
+131,Papeda,"Bubur sagu khas Papua dengan ikan kuah kuning.",makanan,280,sedang,makanan berat,Sedang
+135,Sop Konro,"Sup iga sapi khas Makassar.",makanan,320,sedang,makanan berat,Sedang
+137,Sate Maranggi,"Sate daging khas Purwakarta dengan bumbu khusus.",makanan,310,sedang,makanan berat,Sedang
+138,Nasi Gandul,"Nasi dengan kuah khas Pati, Jawa Tengah.",makanan,340,sedang,makanan berat,Sedang
+139,Soto Medan,"Soto dengan santan khas Medan.",makanan,360,sedang,makanan berat,Sedang
+141,Bajigur,"Minuman hangat dari gula aren dan santan.",minuman,150,sedang,minuman,Rendah
+143,Sekoteng,"Minuman jahe dengan kacang dan pacar cina.",minuman,200,sedang,minuman,Rendah
+144,Ronde,"Minuman jahe dengan bola-bola ketan.",minuman,220,sedang,minuman,Sedang
+145,Es Selendang Mayang,"Minuman es dengan lapisan warna-warni.",minuman,180,sedang,minuman,Rendah
+146,Es Kacang Merah,"Minuman es dengan kacang merah dan santan.",minuman,200,sedang,minuman,Sedang
+147,Es Goyang,"Minuman es yang digoyang sebelum disajikan.",minuman,120,sedang,minuman,Rendah
+150,Es Kopyor,"Minuman es dengan daging kelapa kopyor.",minuman,180,sedang,minuman,Rendah
+157,Wedang Ronde,"Minuman jahe dengan bola ketan isi kacang.",minuman,210,sedang,minuman,Sedang
+158,Teh Tarik,"Teh susu khas yang ditarik untuk menghasilkan busa.",minuman,150,sedang,minuman,Rendah
+159,Jahe Susu,"Minuman jahe dengan susu hangat.",minuman,140,sedang,minuman,Rendah
+160,Bir Pletok,"Minuman rempah tradisional Betawi non-alkohol.",minuman,110,sedang,minuman,Rendah
+162,Susu Jahe Merah,"Susu dengan jahe merah dan gula aren.",minuman,170,sedang,minuman,Rendah
+165,Perkedel Jagung,"Bakwan jagung goreng krispi.",makanan,190,sedang,makanan ringan,Rendah
+166,Tahu Sumedang,"Tahu goreng khas Sumedang renyah luar lembut dalam.",makanan,200,sedang,makanan ringan,Rendah
