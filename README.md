@@ -1,6 +1,6 @@
 # Food Information API with FOCAL Implementation
 
-A Natural Language Processing (NLP) API that provides food information using the FOCAL (Food Ontology-based Conversational Agent Layer) approach. This system can answer descriptive questions about food and provide food recommendations based on natural language queries.
+A Natural Language Processing (NLP) API that provides food information. This system can answer descriptive questions about food and provide food recommendations based on natural language queries.
 
 ## 📋 Table of Contents
 
