@@ -1,5 +1,4 @@
-# Food Information API with FOCAL Implementation
-
+# Food Information API 
 A Natural Language Processing (NLP) API that provides food information. This system can answer descriptive questions about food and provide food recommendations based on natural language queries.
 
 ## 📋 Table of Contents
