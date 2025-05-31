@@ -380,8 +380,29 @@ def focal_similarity(query_vec, doc_vecs, gamma=2.0):
 def search_food_with_focal(query, df, vectorizer, tfidf_matrix, gamma=2.0):
     """Pencarian makanan menggunakan focal similarity"""
     min_cal, max_cal = extract_calorie_filter(query)
+    
+    # Extract entities to better apply filters
+    entities = extract_query_entities(query)
 
     try:
+        # First check if we have a combination that doesn't exist in our dataset
+        if entities['food_type'] and entities['keterangan_kalori']:
+            # Check if the combination exists in our dataset
+            combo_check = df[(df['jenis'].str.lower() == entities['food_type'].lower()) & 
+                             (df['keterangan_kalori'].str.lower() == entities['keterangan_kalori'].lower())]
+            
+            if combo_check.empty:
+                # Return standardized empty DataFrame with consistent message
+                empty_result = pd.DataFrame({
+                    'nama_makanan': ["Tidak ditemukan"],
+                    'kalori': [0],
+                    'jenis': [""],
+                    'keterangan_kalori': [""],
+                    'deskripsi': ["Maaf, Data yang anda cari tidak ditemukan."],
+                    'similarity': [0.0]
+                })
+                return empty_result
+
         # Try to apply filters
         filtered_df = apply_filters(query, df)
 
@@ -391,10 +412,43 @@ def search_food_with_focal(query, df, vectorizer, tfidf_matrix, gamma=2.0):
             print("Mencoba pencarian dengan similarity saja tanpa filter...")
             # Fall back to using all data
             filtered_df = df.copy()
+        
+        # Apply explicit calorie status filter if specified in query
+        if entities['keterangan_kalori'] is not None:
+            print(f"Explicitly filtering by calorie status: {entities['keterangan_kalori']}")
+            calorie_status_mask = filtered_df['keterangan_kalori'].str.lower() == entities['keterangan_kalori'].lower()
+            calorie_filtered = filtered_df[calorie_status_mask]
+            
+            if not calorie_filtered.empty:
+                filtered_df = calorie_filtered
+                print(f"Applied calorie status filter, {len(filtered_df)} results remaining")
+            else:
+                print("No exact matches for calorie status, trying partial match")
+                # Try partial match
+                calorie_status_mask = filtered_df['keterangan_kalori'].str.lower().str.contains(entities['keterangan_kalori'].lower())
+                calorie_filtered = filtered_df[calorie_status_mask]
+                if not calorie_filtered.empty:
+                    filtered_df = calorie_filtered
+                    print(f"Applied partial calorie status filter, {len(filtered_df)} results remaining")
 
         # Use all data rows if filtered results are too few
         if len(filtered_df) < 5:
             print(f"Hanya {len(filtered_df)} hasil ditemukan dengan filter, menambahkan hasil serupa...")
+
+        # Check if after filtering we have no results that match the specific type
+        if entities['food_type'] and len(filtered_df) > 0:
+            type_matches = filtered_df[filtered_df['jenis'].str.lower() == entities['food_type'].lower()]
+            if type_matches.empty:
+                # Return standardized empty DataFrame with consistent message
+                empty_result = pd.DataFrame({
+                    'nama_makanan': ["Tidak ditemukan"],
+                    'kalori': [0],
+                    'jenis': [""],
+                    'keterangan_kalori': [""],
+                    'deskripsi': ["Maaf, Data yang anda cari tidak ditemukan."],
+                    'similarity': [0.0]
+                })
+                return empty_result
 
         query_vec = vectorizer.transform([query])
 
@@ -406,7 +460,7 @@ def search_food_with_focal(query, df, vectorizer, tfidf_matrix, gamma=2.0):
         filtered_df = filtered_df.copy()
         filtered_df['similarity'] = similarities
 
-        # Terapkan filter kalori
+        # Terapkan filter kalori - numerical range
         if min_cal is not None and max_cal is None:
             calorie_df = filtered_df[filtered_df['kalori'] >= min_cal]
             if not calorie_df.empty:
@@ -420,28 +474,80 @@ def search_food_with_focal(query, df, vectorizer, tfidf_matrix, gamma=2.0):
             if not calorie_df.empty:
                 filtered_df = calorie_df
 
-        # If after all filters we still have results
+        # Double-check for keyword-based calorie filter one more time, 
+        # in case it wasn't caught by the entity extraction
+        if 'rendah kalori' in query.lower() or ('rendah' in query.lower() and 'kalori' in query.lower()):
+            rendah_df = filtered_df[filtered_df['keterangan_kalori'].str.lower() == 'rendah']
+            if not rendah_df.empty:
+                print(f"Applied 'rendah' calorie filter, {len(rendah_df)} results found")
+                filtered_df = rendah_df
+        elif 'sedang kalori' in query.lower() or ('sedang' in query.lower() and 'kalori' in query.lower()):
+            sedang_df = filtered_df[filtered_df['keterangan_kalori'].str.lower() == 'sedang']
+            if not sedang_df.empty:
+                print(f"Applied 'sedang' calorie filter, {len(sedang_df)} results found")
+                filtered_df = sedang_df
+        elif 'tinggi kalori' in query.lower() or ('tinggi' in query.lower() and 'kalori' in query.lower()):
+            tinggi_df = filtered_df[filtered_df['keterangan_kalori'].str.lower() == 'tinggi']
+            if not tinggi_df.empty:
+                print(f"Applied 'tinggi' calorie filter, {len(tinggi_df)} results found")
+                filtered_df = tinggi_df
+
+        # If we have valid results
         if not filtered_df.empty:
+            # Final check to see if results match the requested food type
+            if entities['food_type']:
+                matching_type = filtered_df[filtered_df['jenis'].str.lower() == entities['food_type'].lower()]
+                if not matching_type.empty:
+                    filtered_df = matching_type
+                    print(f"Final filter applied for food type: {entities['food_type']}")
+                else:
+                    # Return standardized empty DataFrame with consistent message
+                    empty_result = pd.DataFrame({
+                        'nama_makanan': ["Tidak ditemukan"],
+                        'kalori': [0],
+                        'jenis': [""],
+                        'keterangan_kalori': [""],
+                        'deskripsi': ["Maaf, Data yang anda cari tidak ditemukan."],
+                        'similarity': [0.0]
+                    })
+                    return empty_result
+            
+            # Sort results
             results = filtered_df.sort_values(by='similarity', ascending=False)
             # Ensure all fields exist with default values if missing
             results = results.copy()
             results['deskripsi'] = results['deskripsi'].fillna("Tidak ada deskripsi tersedia")
+            
+            # Return top 5 results
             return results[['nama_makanan', 'kalori', 'jenis', 'keterangan_kalori', 'deskripsi', 'similarity']].head(5)
         else:
             print("Tidak ada hasil yang cocok setelah menerapkan semua filter.")
-            # As a last resort, return top 5 by similarity only
-            all_df = df.copy()
-            all_similarities = cosine_similarity(query_vec, vectorizer.transform(all_df['combined_text_processed'])).flatten()
-            all_df['similarity'] = all_similarities
-            results = all_df.sort_values(by='similarity', ascending=False)
-            results['deskripsi'] = results['deskripsi'].fillna("Tidak ada deskripsi tersedia")
-            return results[['nama_makanan', 'kalori', 'jenis', 'keterangan_kalori', 'deskripsi', 'similarity']].head(5)
+            
+            # Return standardized empty DataFrame with consistent message
+            empty_result = pd.DataFrame({
+                'nama_makanan': ["Tidak ditemukan"],
+                'kalori': [0],
+                'jenis': [""],
+                'keterangan_kalori': [""],
+                'deskripsi': ["Maaf, Data yang anda cari tidak ditemukan."],
+                'similarity': [0.0]
+            })
+            return empty_result
 
     except Exception as e:
         print(f"Error dalam pencarian: {str(e)}")
         print(f"Query: '{query}'")
-        # Create an empty result DataFrame with the right columns
-        return pd.DataFrame(columns=['nama_makanan', 'kalori', 'jenis', 'keterangan_kalori', 'deskripsi', 'similarity'])
+        
+        # Return standardized empty DataFrame with consistent message
+        empty_result = pd.DataFrame({
+            'nama_makanan': ["Error"],
+            'kalori': [0],
+            'jenis': [""],
+            'keterangan_kalori': [""],
+            'deskripsi': ["Maaf, Data yang anda cari tidak ditemukan."],
+            'similarity': [0.0]
+        })
+        return empty_result
 
 # Function to detect query type
 def detect_query_type(query):
@@ -533,6 +639,7 @@ def extract_query_entities(query):
     """
     entities = {
         'food_type': None,
+        'food_name': None,
         'keterangan_kalori': None,
         'calorie_range': None
     }
@@ -579,28 +686,14 @@ def extract_query_entities(query):
         if any(word in entities['food_type'] for word in invalid_words):
             entities['food_type'] = None
     
-    # Kalori keterangan patterns
-    keterangan_kalori_patterns = [
-        r'\b(rendah kalori)\b',
-        r'\b(sedang kalori)\b',
-        r'\b(tinggi kalori)\b'
-    ]
+    # Kalori keterangan patterns - Improved to be more accurate
+    if re.search(r'\brendah\b.*\bkalori\b', query) or re.search(r'\bkalori\b.*\brendah\b', query):
+        entities['keterangan_kalori'] = 'rendah'
+    elif re.search(r'\bsedang\b.*\bkalori\b', query) or re.search(r'\bkalori\b.*\bsedang\b', query):
+        entities['keterangan_kalori'] = 'sedang'
+    elif re.search(r'\btinggi\b.*\bkalori\b', query) or re.search(r'\bkalori\b.*\btinggi\b', query):
+        entities['keterangan_kalori'] = 'tinggi'
     
-    # Direct kalori pattern detection
-    if 'rendah kalori' in query or ('rendah' in query and 'kalori' in query):
-        entities['keterangan_kalori'] = 'rendah kalori'
-    elif 'sedang kalori' in query or ('sedang' in query and 'kalori' in query):
-        entities['keterangan_kalori'] = 'sedang kalori'
-    elif 'tinggi kalori' in query or ('tinggi' in query and 'kalori' in query):
-        entities['keterangan_kalori'] = 'tinggi kalori'
-    else:
-        # Try with regex patterns
-        for pattern in keterangan_kalori_patterns:
-            matches = re.search(pattern, query)
-            if matches:
-                entities['keterangan_kalori'] = matches.group(1)
-                break
-
     # Ekstrak rentang kalori
     min_cal, max_cal = extract_calorie_filter(query)
     if min_cal is not None or max_cal is not None:

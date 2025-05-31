@@ -61,7 +61,7 @@
             <li>Apa itu nasi goreng?</li>
             <li>Berapa kalori dalam rendang?</li>
             <li>Rekomendasikan makanan ringan</li>
-            <li>Makanan dengan kalori rendah</li>
+            <li>Makanan Berat dengan kalori rendah</li>
           </ul>
         </div>
       </div>
@@ -190,17 +190,29 @@
           
           // Format the response based on query type
           let responseContent = '';
-          if (data.query_type === 'descriptive' && data.answer) {
-            responseContent = data.answer;
-          } else if (data.query_type === 'recommendation' && data.results) {
-            responseContent = formatFoodResults(data.results);
-          } else {
-            responseContent = 'Maaf, saya tidak dapat memahami pertanyaan Anda.';
+          
+          // Handle "not found" responses
+          if (data.message && data.message.includes("Maaf, Data yang anda cari tidak ditemukan")) {
+              responseContent = "Maaf, Data yang anda cari tidak ditemukan.";
+          }
+          else if (data.query_type === 'descriptive' && data.answer) {
+              responseContent = data.answer;
+          } 
+          else if (data.query_type === 'recommendation' && data.results) {
+              if (data.results.length === 0) {
+                  responseContent = "Maaf, Data yang anda cari tidak ditemukan.";
+              } else {
+                  responseContent = formatFoodResults(data.results);
+              }
+          } 
+          else {
+              responseContent = data.message || 'Maaf, Data yang anda cari tidak ditemukan.';
           }
           
-          botMsg.innerHTML = `<div class="bg-gray-200 p-3 rounded-lg chat-bubble">${responseContent}</div>`;
+          botMsg.innerHTML = `<div class="bg-gray-200 text-black p-3 rounded-lg chat-bubble">${responseContent}</div>`;
           chatBody.appendChild(botMsg);
           chatBody.scrollTop = chatBody.scrollHeight;
+          
         } catch (error) {
           console.error('Error:', error);
           removeTypingIndicator();

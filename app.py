@@ -214,6 +214,16 @@ def food_api():
             answer = answer_query(query_text, df, vectorizer, tfidf_matrix)
             # Clean the answer format
             answer = clean_answer_format(answer)
+            
+            # Check if it's a "not found" response
+            if "Maaf, saya tidak menemukan informasi" in answer:
+                return jsonify({
+                    "status": "success",
+                    "query_type": "descriptive",
+                    "entities": entities,
+                    "answer": "Maaf, Data yang anda cari tidak ditemukan."
+                })
+            
             return jsonify({
                 "status": "success",
                 "query_type": "descriptive",
@@ -223,6 +233,27 @@ def food_api():
         else:
             # Handle as a search query
             results = search_food_with_focal(query_text, df, vectorizer, tfidf_matrix)
+            
+            # Check if results contain the "not found" message
+            if len(results) == 1 and (results.iloc[0]['nama_makanan'] == "Tidak ditemukan" or results.iloc[0]['nama_makanan'] == "Error"):
+                # Return a not found message with empty results array
+                return jsonify({
+                    "status": "success",
+                    "query_type": "recommendation",
+                    "entities": entities,
+                    "results": [],
+                    "message": "Maaf, Data yang anda cari tidak ditemukan."
+                })
+            
+            # If results are empty, return a standard message
+            if len(results) == 0:
+                return jsonify({
+                    "status": "success",
+                    "query_type": "recommendation",
+                    "entities": entities,
+                    "results": [],
+                    "message": "Maaf, Data yang anda cari tidak ditemukan."
+                })
             
             # If results are empty but we have food_type entity, try direct filtering
             if len(results) == 0 and entities['food_type'] is not None:
@@ -249,6 +280,10 @@ def food_api():
             # Convert results to serializable format
             food_results = []
             for _, row in results.iterrows():
+                # Skip the "Tidak ditemukan" placeholder if it somehow got here
+                if row['nama_makanan'] == "Tidak ditemukan" or row['nama_makanan'] == "Error":
+                    continue
+                    
                 food_results.append({
                     "name": row['nama_makanan'],
                     "calories": int(row['kalori']),
