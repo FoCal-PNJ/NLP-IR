@@ -821,6 +821,7 @@ def main():
     # Always use console interface
     console_interactive_qa(df, vectorizer, tfidf_matrix)
 
+###
 # Add this to make the script runnable
 if __name__ == "__main__":
     main()
