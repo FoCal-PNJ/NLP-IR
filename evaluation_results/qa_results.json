@@ -1,0 +1,57 @@
+{
+  "summary": {
+    "avg_accuracy": 1.0,
+    "avg_keyword_coverage": 1.0,
+    "avg_time_ms": 1.2418031692504883
+  },
+  "queries": [
+    {
+      "query": "Apa itu gado-gado?",
+      "expected_keywords": [
+        "gado-gado"
+      ],
+      "answer": "Gado-Gado: Sayuran rebus disiram saus kacang, kadang ditambah lontong.",
+      "metrics": {
+        "keyword_coverage": 1.0,
+        "accuracy": 1.0,
+        "time_ms": 1.8863677978515625
+      }
+    },
+    {
+      "query": "Berapa kalori dalam rendang?",
+      "expected_keywords": [
+        "rendang"
+      ],
+      "answer": "Rendang memiliki 400 kalori. Sedang kalori.",
+      "metrics": {
+        "keyword_coverage": 1.0,
+        "accuracy": 1.0,
+        "time_ms": 1.0848045349121094
+      }
+    },
+    {
+      "query": "Jenis makanan apa soto ayam?",
+      "expected_keywords": [
+        "soto ayam"
+      ],
+      "answer": "Soto Ayam termasuk jenis makanan berat.",
+      "metrics": {
+        "keyword_coverage": 1.0,
+        "accuracy": 1.0,
+        "time_ms": 0.9989738464355469
+      }
+    },
+    {
+      "query": "Keterangan kalori pecel lele",
+      "expected_keywords": [
+        "pecel lele"
+      ],
+      "answer": "Pecel Lele memiliki Tinggi kalori (450 kalori).",
+      "metrics": {
+        "keyword_coverage": 1.0,
+        "accuracy": 1.0,
+        "time_ms": 0.9970664978027344
+      }
+    }
+  ]
+}

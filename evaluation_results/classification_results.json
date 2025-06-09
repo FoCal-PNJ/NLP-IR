@@ -1,0 +1,149 @@
+{
+  "accuracy": 0.9,
+  "precision": 0.9,
+  "recall": 0.9,
+  "f1": 0.9,
+  "avg_time_ms": 0.0,
+  "predictions": [
+    {
+      "query": "Apa itu nasi goreng?",
+      "true_label": "descriptive",
+      "predicted_label": "descriptive",
+      "correct": true,
+      "time_ms": 0.0
+    },
+    {
+      "query": "Jelaskan tentang sate padang",
+      "true_label": "descriptive",
+      "predicted_label": "descriptive",
+      "correct": true,
+      "time_ms": 0.0
+    },
+    {
+      "query": "Apa kandungan gizi dalam rendang?",
+      "true_label": "descriptive",
+      "predicted_label": "recommendation",
+      "correct": false,
+      "time_ms": 0.0
+    },
+    {
+      "query": "Berapa kalori dalam soto ayam?",
+      "true_label": "descriptive",
+      "predicted_label": "descriptive",
+      "correct": true,
+      "time_ms": 0.0
+    },
+    {
+      "query": "Apa itu karedok?",
+      "true_label": "descriptive",
+      "predicted_label": "descriptive",
+      "correct": true,
+      "time_ms": 0.0
+    },
+    {
+      "query": "Bagaimana cara membuat tempe goreng?",
+      "true_label": "descriptive",
+      "predicted_label": "descriptive",
+      "correct": true,
+      "time_ms": 0.0
+    },
+    {
+      "query": "Apakah wedang jahe sehat?",
+      "true_label": "descriptive",
+      "predicted_label": "descriptive",
+      "correct": true,
+      "time_ms": 0.0
+    },
+    {
+      "query": "Mengapa es kelapa muda disukai banyak orang?",
+      "true_label": "descriptive",
+      "predicted_label": "descriptive",
+      "correct": true,
+      "time_ms": 0.0
+    },
+    {
+      "query": "Apa saja bahan dalam gado-gado?",
+      "true_label": "descriptive",
+      "predicted_label": "descriptive",
+      "correct": true,
+      "time_ms": 0.0
+    },
+    {
+      "query": "Informasi tentang kopi tubruk",
+      "true_label": "descriptive",
+      "predicted_label": "descriptive",
+      "correct": true,
+      "time_ms": 0.0
+    },
+    {
+      "query": "Rekomendasikan makanan rendah kalori",
+      "true_label": "recommendation",
+      "predicted_label": "recommendation",
+      "correct": true,
+      "time_ms": 0.0
+    },
+    {
+      "query": "Cari cemilan sehat",
+      "true_label": "recommendation",
+      "predicted_label": "recommendation",
+      "correct": true,
+      "time_ms": 0.0
+    },
+    {
+      "query": "Saya ingin minuman dengan kalori sedang",
+      "true_label": "recommendation",
+      "predicted_label": "recommendation",
+      "correct": true,
+      "time_ms": 0.0
+    },
+    {
+      "query": "Makanan berat dengan kalori rendah",
+      "true_label": "recommendation",
+      "predicted_label": "recommendation",
+      "correct": true,
+      "time_ms": 0.0
+    },
+    {
+      "query": "Tampilkan minuman tinggi kalori",
+      "true_label": "recommendation",
+      "predicted_label": "recommendation",
+      "correct": true,
+      "time_ms": 0.0
+    },
+    {
+      "query": "Makanan ringan yang sehat untuk diet",
+      "true_label": "recommendation",
+      "predicted_label": "recommendation",
+      "correct": true,
+      "time_ms": 0.0
+    },
+    {
+      "query": "Rekomendasi makanan berat enak",
+      "true_label": "recommendation",
+      "predicted_label": "recommendation",
+      "correct": true,
+      "time_ms": 0.0
+    },
+    {
+      "query": "Berikan contoh cemilan kalori rendah",
+      "true_label": "recommendation",
+      "predicted_label": "recommendation",
+      "correct": true,
+      "time_ms": 0.0
+    },
+    {
+      "query": "Makanan untuk sarapan",
+      "true_label": "recommendation",
+      "predicted_label": "descriptive",
+      "correct": false,
+      "time_ms": 0.0
+    },
+    {
+      "query": "Minuman yang bagus untuk kesehatan",
+      "true_label": "recommendation",
+      "predicted_label": "recommendation",
+      "correct": true,
+      "time_ms": 0.0
+    }
+  ]
+}

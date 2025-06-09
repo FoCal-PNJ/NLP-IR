@@ -1,0 +1,223 @@
+{
+  "summary": {
+    "avg_precision": 0.8,
+    "avg_recall": 0.31,
+    "avg_f1": 0.41492063492063497,
+    "avg_ndcg": 0.8,
+    "avg_time_ms": 7.395839691162109
+  },
+  "queries": [
+    {
+      "query": "Makanan ringan dengan kalori rendah",
+      "criteria": {
+        "jenis": "makanan ringan",
+        "keterangan_kalori": "rendah"
+      },
+      "metrics": {
+        "precision": 1.0,
+        "recall": 0.16666666666666666,
+        "f1": 0.2857142857142857,
+        "ndcg": 1.0,
+        "time_ms": 8.970499038696289
+      },
+      "results": [
+        {
+          "nama_makanan": "Urap-Urap",
+          "jenis": "makanan ringan",
+          "kalori": 180.0,
+          "keterangan_kalori": "Rendah",
+          "similarity": 0.1479716607842211
+        },
+        {
+          "nama_makanan": "Asinan Betawi",
+          "jenis": "makanan ringan",
+          "kalori": 200.0,
+          "keterangan_kalori": "Rendah",
+          "similarity": 0.14794508480841173
+        },
+        {
+          "nama_makanan": "Capcay Kuah",
+          "jenis": "makanan ringan",
+          "kalori": 190.0,
+          "keterangan_kalori": "Rendah",
+          "similarity": 0.14794508480841173
+        },
+        {
+          "nama_makanan": "Lodeh Terong",
+          "jenis": "makanan ringan",
+          "kalori": 230.0,
+          "keterangan_kalori": "Rendah",
+          "similarity": 0.1477692501073523
+        },
+        {
+          "nama_makanan": "Perkedel Kentang",
+          "jenis": "makanan ringan",
+          "kalori": 210.0,
+          "keterangan_kalori": "Rendah",
+          "similarity": 0.1476174192150259
+        }
+      ]
+    },
+    {
+      "query": "Makanan berat yang kalorinya dibawah 300",
+      "criteria": {
+        "jenis": "makanan berat",
+        "max_kalori": 300
+      },
+      "metrics": {
+        "precision": 1.0,
+        "recall": 0.25,
+        "f1": 0.4,
+        "ndcg": 1.0,
+        "time_ms": 7.42793083190918
+      },
+      "results": [
+        {
+          "nama_makanan": "Bubur Ayam",
+          "jenis": "makanan berat",
+          "kalori": 290.0,
+          "keterangan_kalori": "Sedang",
+          "similarity": 0.14784384742852902
+        },
+        {
+          "nama_makanan": "Ikan Bakar",
+          "jenis": "makanan berat",
+          "kalori": 250.0,
+          "keterangan_kalori": "Sedang",
+          "similarity": 0.146695684763649
+        },
+        {
+          "nama_makanan": "Lemang",
+          "jenis": "makanan berat",
+          "kalori": 280.0,
+          "keterangan_kalori": "Sedang",
+          "similarity": 0.14660499502160118
+        },
+        {
+          "nama_makanan": "Papeda",
+          "jenis": "makanan berat",
+          "kalori": 280.0,
+          "keterangan_kalori": "Sedang",
+          "similarity": 0.14660499502160118
+        },
+        {
+          "nama_makanan": "Sayur Lodeh",
+          "jenis": "makanan berat",
+          "kalori": 280.0,
+          "keterangan_kalori": "Sedang",
+          "similarity": 0.1463195503758121
+        }
+      ]
+    },
+    {
+      "query": "Minuman kalori tinggi",
+      "criteria": {
+        "jenis": "minuman",
+        "keterangan_kalori": "tinggi"
+      },
+      "metrics": {
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "ndcg": 0,
+        "time_ms": 2.388477325439453
+      },
+      "results": []
+    },
+    {
+      "query": "Cemilan dengan kalori sedang",
+      "criteria": {
+        "jenis": "cemilan",
+        "keterangan_kalori": "sedang"
+      },
+      "metrics": {
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "ndcg": 1.0,
+        "time_ms": 13.206005096435547
+      },
+      "results": [
+        {
+          "nama_makanan": "Serabi",
+          "jenis": "cemilan",
+          "kalori": 280.0,
+          "keterangan_kalori": "Sedang",
+          "similarity": 0.14710124107623773
+        },
+        {
+          "nama_makanan": "Pastel",
+          "jenis": "cemilan",
+          "kalori": 280.0,
+          "keterangan_kalori": "Sedang",
+          "similarity": 0.14710124107623773
+        },
+        {
+          "nama_makanan": "Risoles",
+          "jenis": "cemilan",
+          "kalori": 300.0,
+          "keterangan_kalori": "Sedang",
+          "similarity": 0.14710124107623773
+        },
+        {
+          "nama_makanan": "Combro",
+          "jenis": "cemilan",
+          "kalori": 250.0,
+          "keterangan_kalori": "Sedang",
+          "similarity": 0.14710124107623773
+        },
+        {
+          "nama_makanan": "Es Cendol",
+          "jenis": "cemilan",
+          "kalori": 250.0,
+          "keterangan_kalori": "Sedang",
+          "similarity": 0.13838513027433028
+        }
+      ]
+    },
+    {
+      "query": "Minuman di bawah 100 kalori",
+      "criteria": {
+        "jenis": "minuman",
+        "max_kalori": 100
+      },
+      "metrics": {
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1": 0.888888888888889,
+        "ndcg": 1.0,
+        "time_ms": 4.986286163330078
+      },
+      "results": [
+        {
+          "nama_makanan": "Teh Poci",
+          "jenis": "minuman",
+          "kalori": 80.0,
+          "keterangan_kalori": "Rendah",
+          "similarity": 0.1419469856212815
+        },
+        {
+          "nama_makanan": "Kopi Tubruk",
+          "jenis": "minuman",
+          "kalori": 90.0,
+          "keterangan_kalori": "Rendah",
+          "similarity": 0.14079308071718152
+        },
+        {
+          "nama_makanan": "Es Teh Lemon",
+          "jenis": "minuman",
+          "kalori": 80.0,
+          "keterangan_kalori": "Rendah",
+          "similarity": 0.13494327864650182
+        },
+        {
+          "nama_makanan": "Es Kelapa Muda",
+          "jenis": "minuman",
+          "kalori": 70.0,
+          "keterangan_kalori": "Rendah",
+          "similarity": 0.13381505623557877
+        }
+      ]
+    }
+  ]
+}

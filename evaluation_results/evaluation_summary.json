@@ -1,0 +1,22 @@
+{
+  "timestamp": "2025-06-09 01:07:52",
+  "total_time_seconds": 0.2728152275085449,
+  "classification": {
+    "precision": 0.9,
+    "recall": 0.9,
+    "f1": 0.9,
+    "avg_time_ms": 0.0
+  },
+  "information_retrieval": {
+    "precision": 0.8,
+    "recall": 0.31,
+    "f1": 0.41492063492063497,
+    "ndcg": 0.8,
+    "avg_time_ms": 7.395839691162109
+  },
+  "question_answering": {
+    "accuracy": 1.0,
+    "keyword_coverage": 1.0,
+    "avg_time_ms": 1.2418031692504883
+  }
+}
